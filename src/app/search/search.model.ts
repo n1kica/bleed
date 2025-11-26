@@ -1,4 +1,4 @@
-import { TVShow } from '../../shared/interfaces/tv-show.model';
+import { TVShow } from '../show/show.model';
 
 export type SearchEvent = {
   type: 'search' | 'next' | 'prev' | 'reset';
@@ -8,6 +8,6 @@ export type SearchEvent = {
 export interface SearchState {
   page?: number;
   pages?: number;
-  total?: string;
+  total?: number;
   tv_shows?: TVShow[];
 }

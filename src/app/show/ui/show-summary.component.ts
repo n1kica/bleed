@@ -1,9 +1,8 @@
 import { Component, input, output } from '@angular/core';
-import { TVShow } from '../../shared/interfaces/tv-show.model';
+import { TVShow } from '../show.model';
 
 @Component({
   selector: 'app-show-summary',
-  standalone: true,
   imports: [],
   template: `
     <ul>

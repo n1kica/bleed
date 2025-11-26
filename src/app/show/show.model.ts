@@ -31,3 +31,7 @@ export interface Episode {
   name: string;
   air_date: string;
 }
+
+export interface ShowDetailsState {
+  tvShow: TVShow;
+}

@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
   imports: [],
-  template: `<h1>Welcome to Home Page!</h1>`,
+  template: `<h1>Welcome to {{ title() }} Page!</h1>`,
 })
-export class HomeComponent {}
+export class HomeComponent {
+  protected readonly title = signal('Twenty-One');
+}

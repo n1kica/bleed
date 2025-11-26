@@ -1,10 +1,9 @@
 import { Component, input, output } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TVShow } from '../../shared/interfaces/tv-show.model';
+import { TVShow } from '../../show/show.model';
 
 @Component({
   selector: 'app-search-results',
-  standalone: true,
   imports: [RouterLink],
   template: `
     <ul>
@@ -15,6 +14,8 @@ import { TVShow } from '../../shared/interfaces/tv-show.model';
             {{ show.favorite ? 'REMOVE' : 'ADD' }}
           </button>
         </li>
+      } @empty {
+        No results found ...
       }
     </ul>
   `,
